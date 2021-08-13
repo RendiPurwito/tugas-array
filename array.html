@@ -10,7 +10,83 @@
     
 
     <script>
-        
+        //Metode Array Join
+        //  Metode Array .join() berfungsi untuk menggabungkan elemen array menjadi sebuah string. Sebuah argumen bisa diinputkan kedalam method ini yang akan berfungsi sebagai karakter ’pembatas’ untuk menyatukan array
+        var hewan = ['monyet', 'tikus', 'kadal', 'ular', 'semut'];
+        console.log(hewan.join('|')); //hasil: monyet|tikus|ular|semut
+
+        // Metode Array Reverse
+        // Metode Array.reverse() digunakan untuk membalikkan urutan dari elemen di dalam array. Method ini akan mengubah array asal
+        var nama = ["sandi", "majid", "nova", "rafi", "faiz"]
+        console.log(nama.toString());   //hasil: sandi,majid,nova,rafi,faiz
+        nama.reverse();
+        console.log(nama.toString());   //hasil: faiz,rafi,nova,majid,sandi
+
+        // Metode Array Sort
+        // Metode Array.sort() digunakan untuk mengurutkan elemen dari array. Jika method ini dipanggil tanpa argumen, elemen dari array akan diurutkan berdasarkan abjad. Jika elemen di dalam array bukan huruf, maka akan dikonversi sementara menjadi string, baru kemudian dilakukan proses pengurutan. Jika ditemukan elemen dengan nilai null atau undefined, akan di tempatkan pada urutan akhir.
+        var hp = ["oppo","vivo","advan","xiaomi","iphone", "samsung"];
+        hp.sort();
+        console.log(hp.toString());   //hasil: advan,iphone,oppo,samsung,vivo,xiaomi
+
+        // Metode Array Concat
+        // Metode Array.concat() berfungsi untuk ”penyambungan” array. Hasil akhir dari pemanggilan fungsi ini adalah array baru dengan penambahan dari method concat(). Elemen yang ditambahkan diinput sebagai argumen dari method concat().
+        var soda = ["fanta", "sprite", "cola"];
+        console.log(soda.toString());   //hasil: fanta,sprite,cola
+        var soda2=soda.concat("polaris", "fayrouz", "aw");
+        console.log(soda2.toString());  //hasil: fanta,sprite,cola,polaris,fayrouz,aw
+
+        // Metode Array Slice
+        // Metode Array.slice() digunakan untuk ’memotong’ array menjadi array baru, atau menjadi ’sub-array’ dari array asal. Method slice() ini membutuhkan 2 buah argumen yang berisi posisi index awal dan akhir pemotongan.
+        var game = ["FF", "PUBG", "Minecraft", "CODM", "GI"];
+        //slice dari index ke 3 sampai 4
+        var game2 = game.slice(3,4)
+        console.log(game2.toString());     //hasil: CODM
+
+        // Metode Array Splice
+        // Metode splice() adalah method ’serba-bisa’ yang bisa digunakan untuk memotong array, menambahkan elemen array, bahkan melakukan keduanya sekaligus.
+        var sosmed = ["instagram", "tiktok", "line", "facebook", "twitter"];
+        console.log(sosmed.toString());     // hasil: instagram,tiktok,line,facebook,twitter
+
+        //splice dari index ke 4
+        var sosmed2 = sosmed.splice(4)
+        console.log(sosmed.toString());     // hasil: instagram,tiktok,line,facebook
+        console.log(sosmed2.toString());     // hasil: twitter
+
+        // Metode Array Push dan Pop
+        // Method push() dan pop() digunakan untuk menambahkan dan mengurangi elemen dari array. Kedua method ini memungkinkan pemrosesan array sabagai sebuah ’stack’ atau tumpukan dengan metoda ”first in last out”. Method push() akan menambahkan elemen array pada akhir dari array, sedangkan method pop()  akan menghapus elemen terakhir dari array
+        // Push
+        var minuman = ["aqua", "sprite", "ultramilk", "pocari"];
+        minuman.push("coca cola");
+        console.log(minuman.toString());   // hasil: aqua,sprite,ultramilk,pocari,coca cola
+        minuman.push("milo");
+        console.log(minuman.toString());   // hasil: aqua,sprite,ultramilk,pocari,coca cola,milo
+        // Pop
+        minuman.pop();
+        console.log(minuman.toString());   // hasil: aqua,sprite,ultramilk,pocari,coca cola
+        minuman.pop();
+        console.log(minuman.toString());   // hasil: aqua,sprite,ultramilk,pocari
+
+        // Metode Array Unshift dan Shift
+        // Metode Array.unshift() dan Array.shift() hampir sama dengan Array.push() dan Array.pop() perbedaannya, method unshift() dan shift() akan menambahkan atau menghapus elemen array di awal array. Method unshift() akan menambahkan elemen baru diawal array, dan menggeser seluruh eleman yang ada. Metode shift() akan menghapus elemen paling awal array, dan menggeser ke bawah seluruh elemen lain di dalam Array. Kedua metode ini akan mengubah array asal.
+        // Unshift
+        var komik = ["DC","Marvel","Valiant"];
+        komik.unshift("Manga", "Manhua", "Manhwa");
+        console.log(komik.toString());   // hasil: Manga,Manhua,Manhwa,DC,Marvel,Valiant
+        // Shift
+        var komik = ["DC","Marvel","Valiant"];
+        komik.shift();
+        console.log(komik.toString());   // hasil: Marvel,Valiant
+      
+        // Metode Array toString dan toLocaleString()
+        // Metode toString() dan toLocaleString() berfungsi untuk menkonversi array menjadi string. Dalam contoh-contoh yang kita lakukan dalam tutorial ini, hampir semuanya menggunakan method toString untuk menampilkan hasil array. Kedua method ini akan mengkonversi masing-masing elemen menjadi string, lalu menyambungnya menjadi sebuah string dengan karakter koma sebagai pemisah. Perbedaan antara toString() dan toLocaleString() adalah metode toLocaleString() akan mengkonversi elemen berdasarkan setingan lokal web browser, namun anda tidak akan melihat perbedaannya.
+        // toString()
+        var angka = [10,11,12,13,14,15,16,17,18];
+        console.log(angka.toString());           // hasil: 10,11,12,13,14,15,16,17,18
+        // toLoacaleString()
+        var angka = [10,11,12,13,14,15,16,17,18];
+        console.log(angka.toLocaleString());     // hasil: 10,11,12,13,14,15,16,17,18
+
+
     </script>
 </body>
 </html>
